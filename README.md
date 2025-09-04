@@ -110,8 +110,6 @@ Opção 2 — Download
 ---
 
 📜 **Licença**
-- Este projeto está sob a licença MIT. Veja LICENSE para mais detalhes.
+Este projeto é de livre utilização para fins de estudo e pode ser adaptado para outros contextos.
 
----
-**Autoria**
-- Projeto desenvolvido no Senac Lapa Tito sob direção da docente Fernanda Nalon para a turma TDS03.
+
