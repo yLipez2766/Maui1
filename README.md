@@ -1,64 +1,117 @@
-📌 Cadastro de Usuário – .NET MAUI
+[README.md](https://github.com/user-attachments/files/22147013/README.md)
+# Cadastro de Usuário — .NET MAUI (C#)
 
-Este projeto foi desenvolvido com o intuito de permitir que o usuário realize seu **cadastro pessoal** preenchendo os seguintes dados:
+![.NET](https://img.shields.io/badge/.NET%20MAUI-8A2BE2?logo=dotnet&logoColor=white)
+![C#](https://img.shields.io/badge/C%23-239120?logo=csharp&logoColor=white)
+![Visual Studio](https://img.shields.io/badge/Visual%20Studio-5C2D91?logo=visualstudio&logoColor=white)
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
-* Nome completo
-* Data de nascimento
-* Gênero
-* Idade
+Aplicação simples para **cadastrar usuários** com os campos:
+- **Nome completo**
+- **Data de nascimento**
+- **Gênero**
+- **Idade**
 
-A aplicação é **simples, replicável** e pode ser facilmente adaptada para outras soluções que necessitem de cadastro.
+> O objetivo é servir como **base reutilizável**: você pode replicar a lógica/estrutura para qualquer outro aplicativo.
 
-🚀 Tecnologias Utilizadas
+---
 
-* .NET MAUI** (Multi-platform App UI)
-* C# (versão 9.0)**
-* Visual Studio** (recomendado: última versão com suporte ao .NET MAUI)
+Principais recursos
 
-📥 Como baixar o projeto
+- Formulário com campos essenciais de cadastro  
+- Validação básica (campos obrigatórios e formatos)  
+- Arquitetura organizada (Views / Models / ViewModels – MVVM)  
+- Projeto .NET MAUI em **C# (versão 9.0 da linguagem)**
 
-1. Clone este repositório:
+---
 
-   ```bash
-   git clone https://github.com/SEU-USUARIO/SEU-REPOSITORIO.git
-   ```
+Pré-requisitos
 
-2. Acesse a pasta do projeto:
+- **Windows 10/11**  
+- **Visual Studio** com a carga de trabalho **“.NET Multi-platform App UI development (MAUI)”**  
+  - Inclui Android SDKs e Emulador Android  
+- **.NET SDK** compatível com MAUI já instalado (o instalador do VS cuida disso)
+- (Opcional) **Dispositivo Android** com modo desenvolvedor **ou** emulador configurado  
+- (Opcional – macOS) Para compilar iOS/MacCatalyst, é necessário ambiente Apple
 
-   ```bash
-   cd SEU-REPOSITORIO
-   ```
-⚙️ Como executar o projeto
 
-1. Abra o projeto no **Visual Studio**.
-2. Certifique-se de que o **.NET MAUI workload** esteja instalado.
+> dotnet workload install maui
 
-   * No Visual Studio Installer, marque a opção **.NET Multi-platform App UI development**.
-3. Compile a aplicação selecionando a plataforma de sua preferência (**Android**, **Windows**, **iOS** ou **MacCatalyst**).
-4. Execute o projeto:
+---
 
-   * Clique em **Run** ou pressione `F5`.
+**Como obter o projeto**
+- Opção 1 — Git (recomendado)
+- git clone https://github.com/seu-usuario/seu-repo.git
+- cd seu-repo
 
-🖥️ Como funciona a aplicação
 
-* Ao abrir, o usuário terá acesso a uma tela de **cadastro**.
-* Os seguintes campos estarão disponíveis para preenchimento:
+Opção 2 — Download
+- Baixe o .zip do repositório
+- Extraia em uma pasta local
+- Abra o .sln no Visual Studio
 
-  * Nome completo
-  * Data de nascimento
-  * Gênero
-  * Idade
-* Após o preenchimento, os dados podem ser **armazenados internamente** e reutilizados.
-* O projeto serve como **modelo base** para sistemas que necessitem de gerenciamento de usuários.
+---
 
-🔄 Possíveis adaptações
+**Executando o app**
+- Abra a solução no Visual Studio
+- Selecione o destino:
+- Android Emulator
+- Windows Machine (WinUI 3), se o projeto tiver alvo Windows
+- Dispositivo físico Android
+- Clique em Run/Play (F5)
 
-Este projeto pode ser expandido para:
+---
 
-* Integração com banco de dados (SQLite, SQL Server, MySQL).
-* Autenticação de usuários.
-* Uso em aplicações corporativas, educacionais ou comerciais.
+**Como usar**
+- Preencha os campos (nome, data de nascimento, gênero e idade)
+- Clique em Salvar
+- Veja a confirmação ou mensagens de erro
 
-📜 Licença
+---
 
-Este projeto é de livre utilização para fins de estudo e pode ser adaptado para outros contextos.
+**Validações implementadas (sugestão)**
+- Nome completo: obrigatório
+- Data de nascimento: formato válido e não no futuro
+- Gênero: precisa estar selecionado
+- Idade: numérica (> 0) — ou calculada automaticamente
+
+---
+
+**Reutilizando em outros projetos**
+- Copie Models, ViewModels e a tela de cadastro
+- Ajuste o namespace
+- Adapte regras no Usuario.cs e MainViewModel.cs
+- Estilize pelo App.xaml
+
+---
+
+**Solução de problemas**
+- “No devices/emulators found” → configure no Android Device Manager
+- Workload/SDK → rode dotnet workload restore
+- Build lento → limpe/Rebuild a solução
+- Falha USB → ative depuração no dispositivo
+
+---
+
+**Roadmap**
+- Persistência local (SQLite/Preferences)
+- Cálculo automático da idade
+- Internacionalização (pt-BR, en-US)
+- Testes unitários
+
+---
+
+**Contribuindo**
+- Fork
+- Branch: feat/sua-melhoria
+- Commit
+- Pull Request
+
+---
+
+📜 **Licença**
+- Este projeto está sob a licença MIT. Veja LICENSE para mais detalhes.
+
+---
+**Autoria**
+- Projeto desenvolvido no Senac Lapa Tito sob direção da docente Fernanda Nalon para a turma TDS03.
